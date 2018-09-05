@@ -108,7 +108,7 @@ class List
     ***     Head in the front & Tail in the end
     ***     Size increases everytime by 1
     ***  @param: integer
-    ***  @return: void
+    ***  @return: none
     **/
     void Insert(int val)
     {
@@ -131,7 +131,7 @@ class List
     ***  void PrintTail()
     ***  prints out the Tail value (the last value)
     ***  @param: none
-    ***  @return: void
+    ***  @return: none
     **/
     void PrintTail()
     {
