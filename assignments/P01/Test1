@@ -1,6 +1,6 @@
 The values in the vector will be printed inside < >
 
-this arrray has no values, don't try to pop from an empty array... false : 0
+this array has no values, don't try to pop from an empty array... false : 0
 
 < 13 31 73 > 
 Size: 10
