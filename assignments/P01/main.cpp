@@ -29,7 +29,8 @@ int main()
   //creating V to have the size of 10
   myVector V(10);
   // V.push_back("nope");
-
+  
+  //Test 1
   //testing the methods
   cout << "The values in the vector will be printed inside < >\n\n";
   //pops off from an empty array
@@ -74,7 +75,7 @@ int main()
   //prints the final product of the vector after the pushing and popping
   V.print();
 
-
+  // Test2
   // //testing with slack example
   // myVector V(10);
   // V.print();      // should print nothing
