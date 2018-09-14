@@ -86,7 +86,7 @@ int myVector::pop_back()
   //checks for an empty array
   if(index == 0 || index < 0)
   {
-    cout << "this arrray has no values, don't try to pop from an empty array... ";
+    cout << "this array has no values, don't try to pop from an empty array... ";
     //prints 0 for false if its empty
     return AnythingIn();
   }
