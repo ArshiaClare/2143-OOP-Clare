@@ -1,0 +1,18 @@
+The values in the vector will be printed inside < >
+
+this arrray has no values, don't try to pop from an empty array... false : 0
+
+< 13 31 73 > 
+Size: 10
+Items: 3
+percent: 0.3
+
+Size after push_back: 14053
+Items: 10003
+percent: 0.711805
+
+Size after pop_back: 13
+Items: 5
+percent: 0.384615
+
+< 13 31 73 0 1 > 
