@@ -44,7 +44,8 @@
   
 - Inheritance
   - It contains base class and a derived class. 
-  - ![classes-and-objects-in-c](https://user-images.githubusercontent.com/35582387/46191035-8f152280-c2bb-11e8-99e6-e8cf2b1ba26c.jpg)
+  - ![multileve-inheritance](https://user-images.githubusercontent.com/35582387/46191551-94736c80-c2bd-11e8-9138-9227fd5384e4.png)
+
   
 - Multiple Inheritance
   - Base class that has more than two derived classes
