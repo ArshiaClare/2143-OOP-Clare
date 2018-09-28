@@ -11,7 +11,7 @@
 - Object
   - Instance of a class
   
-  - ![classes-and-objects-in-c](https://user-images.githubusercontent.com/35582387/46189501-78b79880-c2b4-11e8-9c2f-16182110553d.jpg)
+  ![classes-and-objects-in-c](https://user-images.githubusercontent.com/35582387/46189501-78b79880-c2b4-11e8-9c2f-16182110553d.jpg)
   
 - Method 
   - Procedures that an object performs (aka member function)
@@ -44,12 +44,12 @@
   
 - Inheritance
   - It contains base class and a derived class. 
-  - ![multileve-inheritance](https://user-images.githubusercontent.com/35582387/46191551-94736c80-c2bd-11e8-9138-9227fd5384e4.png)
+  ![multileve-inheritance](https://user-images.githubusercontent.com/35582387/46191551-94736c80-c2bd-11e8-9138-9227fd5384e4.png)
 
   
 - Multiple Inheritance
   - Base class that has more than two derived classes
-  - ![download](https://user-images.githubusercontent.com/35582387/46191212-46119e00-c2bc-11e8-91ef-57b393d2df41.png)
+  ![download](https://user-images.githubusercontent.com/35582387/46191212-46119e00-c2bc-11e8-91ef-57b393d2df41.png)
 
 - Composition
   - a class composition is where the owner class controls the lifetime of objects of the owned class.
