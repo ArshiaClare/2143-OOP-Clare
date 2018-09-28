@@ -31,7 +31,7 @@
   
 - Attributes / Properties 
   - an object's data items
-  - A class's attributezs are the data elements.
+  - A class's attributes are the data elements.
   
 - Class Variable
   - It has the same value across all objects of the class
