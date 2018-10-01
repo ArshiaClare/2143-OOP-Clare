@@ -8,11 +8,11 @@
 *      
 *
 *  @author Arshia Clare
-*  @version 1.1 10/01/18 
+*  @version 2 10/01/18 
 *  @filename main.cpp
 *  @github name: ArshiaClare
-*  @github: https://github.com/ArshiaClare/2143-OOP-Clare
-*  @repl.it: https://repl.it/@ArshiaClare/P02-ver-2
+*  github:https://github.com/ArshiaClare/2143-OOP-Clare
+*  @repl.it: https://repl.it/@ArshiaClare/P02-final
 */
 
 #include <iostream>
@@ -24,7 +24,7 @@ using namespace std;
 int main()
 {
   //github test
-  
+  cout << "This is output of github test:\n\n";
   myVector v1;
   myVector v2;
 
@@ -65,8 +65,8 @@ int main()
   // v2 contains: [540,1260,100]
   v2.print();
 
-  // //my test
-
+  //my test
+  // cout << "This is output of my test:\n\n";
   // //creating V to have the size of 10
   // myVector V(10);
   // myVector V2(10);
@@ -99,27 +99,26 @@ int main()
   // V4.push_back(7);
   // V4.push_back(4);
 
-  // cout << "printing the original:\n";
+  // cout << "printing the original V and V2:\n";
   // V.print();
   // V2.print();
-  // cout << endl;
 
   // //testing << operation overload
-  // cout<<"testing [] overload:";
-  // cout<<V<<endl;
+  // cout << endl << "testing << overload:\n";
+  // cout << V << endl;
 
   // //assigning val to certain place in the array
+  // //testing [] overload
   // V[1] = 10;
   // V2[2] = 10;
 
   // //printing to see new arrays
-  // cout << "printing to see new arrays with 10s\n";
+  // cout << endl << "printing to see new arrays with 10\n";
   // V.print();
   // V2.print();
-  // cout << endl;
 
   // //testing [] overload 
-  // cout<<"what's in V[2]?\n";
+  // cout << endl <<"what's in V[2]?\n";
   // cout<<V[2]<<endl;
   // cout<<"what's in V[8]?\n";
   // cout<<V[8]<<endl<<endl;
@@ -158,5 +157,8 @@ int main()
   // //testing equality again
   // cout << "is there equality between V and V2?\n";
   // cout << (V == V2) << endl;
+  // cout << (V2 == V) << endl;
 
+  // cout << "calling assignment\n";
+  // cout << (V2 = V) <<  endl;
 }
