@@ -1,0 +1,31 @@
+printing the original:
+[27,33,24,18,9]
+[9,3,4,3]
+
+testing [] overload:[27,33,24,18,9]
+printing to see new arrays with 10s
+[27,10,24,18,9]
+[9,3,10,3]
+
+what's in V[2]?
+24
+what's in V[8]?
+Warning: vector[8] is undefined ...
+0
+
+[18,7,14,15,9]
+
+is there equality between V and V2?
+0
+is there equality between V3 and V4?
+1
+
+testing push_back(array, size)
+[18,7,14,15,9,1,2,3,4,5]
+
+[2,2,1,5,0,0,0,0,0,0]
+[11,5,11,8,0,0,0,0,0,0]
+[20,8,21,11]
+
+is there equality between V and V2?
+0
