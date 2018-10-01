@@ -1,7 +1,7 @@
 /**
 *  Course: CMPS 2143 - OOP
 *  @author Arshia Clare
-*  @version 1.1 10/01/18 
+*  @version 2 10/01/18 
 *  @filename myVector.h
 */
 #include <iostream>
@@ -23,7 +23,7 @@ public:
   void print(); //user friendly function to know the items in the array
   void push_back(int item); //pushing an item to the back of the array
   void push_back(string item); //pushing a string, error checking
-  void push_back(int*, int); 
+  void push_back(int*, int); //pushes an array and size
   int pop_back(); //pops the item from the back of the array
   int size(); //the current size of the array
   int indexNum(); //tells how many items are currently in the array
@@ -107,7 +107,7 @@ public:
       if(b.theVector[i] == 0)
       {
         a.theVector[i] = 0;
-      }else{
+      }else if(b.theVector[i] < 0 || b.theVector[i] > 0)  {
         //good numbers for dividing
         a.theVector[i] = a.theVector[i]/b.theVector[i];
       }
@@ -145,18 +145,34 @@ public:
   //@param: reference of two array
   //checks if the values of two arrays are equal
   //@returns bool
-  friend bool operator==(myVector& a, myVector& b)
-  {
-    for(int i = 0; i < b.index; i++)
-    {
-      if(a.theVector[i] == b.theVector[i])
+  friend bool operator==(const myVector& a, const myVector& b)
+  {//checks for length of the array is equal
+    if(a.index == b.index){
+      for(int i = 0; i < a.index; i++)
       {
-        return true;
+        if(a.theVector[i] == b.theVector[i])
+        {
+          return true;
+        }
       }
     }
     return false;
   }
   
+  //overloading '=' 
+  //@param: reference of array RHS
+  //assigns the values in RHS to LHS
+  //@returns myVector
+  myVector operator=(const myVector& a) {
+    int size = a.index;
+    int *temp = new int[size];
+    for(int i = 0; i < size; i++){
+      temp[i] = a.theVector[i];
+      a.theVector[i] = temp[i];
+    }
+    return a;
+  }  
+
 };
 
 
@@ -343,7 +359,7 @@ double myVector::percentFull()
 
 /**
 *  A function that checks if the array is occupied or not.
-*  If it is a empty array then it is false, otherwise it's true.
+*  If it is an empty array then it is false, otherwise it's true.
 *  @param none
 *  @return {int} false or true.
 */
