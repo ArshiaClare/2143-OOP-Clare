@@ -1,4 +1,3 @@
-##Program 2
 | Items in the folder | Description    |
 |---------------------|------------    |
 | main.cpp            | contains tests to show requirements were met. |
