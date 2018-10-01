@@ -1,9 +1,13 @@
-printing the original:
+This is output of my test:
+
+printing the original V and V2:
 [27,33,24,18,9]
 [9,3,4,3]
 
-testing [] overload:[27,33,24,18,9]
-printing to see new arrays with 10s
+testing << overload:
+[27,33,24,18,9]
+
+printing to see new arrays with 10
 [27,10,24,18,9]
 [9,3,10,3]
 
@@ -29,3 +33,6 @@ testing push_back(array, size)
 
 is there equality between V and V2?
 0
+0
+calling assignment
+[11,5,11,8,0,0,0,0,0,0]
