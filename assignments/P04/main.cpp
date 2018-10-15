@@ -2,23 +2,25 @@
 *  Course: CMPS 2143 - OOP
 *  Program: P04
 *
-*  Purpose: The program is a game of life playthrough. 
+*  Purpose: The program is a game of life playthrough.
 *	It applies the rules of the game, and it does
-* 	the game the amount the user or command line 
+* 	the game the amount the user or command line
 *	suggests. It is displayed using SFML. The
 * 	white rectangles represent the alive cells,
-* 	rest are dead. The rules apply to 
+* 	rest are dead. The rules apply to
 *	overpopulation, underpopulation, and resurrections.
-*	
-* 
+*
+*
 *  @author Arshia Clare
 *  @version 1.1 10/15/2018
 *  @github repo: https://github.com/ArshiaClare
 */
+
 #include <iostream>
 #include <fstream>
 #include <string>
 //#include <cstring>
+#include <sstream>
 #include <SFML/Graphics.hpp>
 
 using namespace sf;
@@ -29,8 +31,8 @@ struct golCell {
 	bool isAlive;       //keeps track of alive and dead
 	int neighborCount;  //number of neighbor
 
-	//SFML 
-	//example from sfml_game_of_life_2.cpp
+						//SFML 
+						//example from sfml_game_of_life_2.cpp
 	RectangleShape Rect;
 	int Width;
 	int Height;
@@ -67,12 +69,12 @@ private:
 public:
 	RenderWindow Window;	//SFML
 	golCell **World;		//SFML 
-	//@param two integers
-	//constructor that initialize FrameCount, FrameRate,
-	//the window's width and height
-	//no return
+							//@param two integers
+							//constructor that initialize FrameCount, FrameRate,
+							//the window's width and height
+							//no return
 	GameOfLife(int r, int c) {
-		FrameCount = 0;		
+		FrameCount = 0;
 		FrameRate = 10;
 		BoardRow = r;
 		BoardCol = c;
@@ -126,13 +128,14 @@ public:
 	//@param string, which is the name of the input file
 	//Reads in row #, col #, and values of 0 and 1 from an input file
 	//@returns void
-	void initBoard(std::ifstream& infile){	//(std::string infilename) {
+	void initBoard(std::string infilename) {
 		//opening the input file
-		/*std::ifstream infile;
-		infile.open(infilename);*/
+		std::ifstream infile;
+		infile.open(infilename);
 
 		std::string Fname;
 		std::string Lname;
+		
 		//reads in my Name
 		infile >> Fname >> Lname;
 
@@ -160,18 +163,19 @@ public:
 				gameBoard[i][j].neighborCount = 0;
 			}
 		}
+		infile.close();
 	}
 
 	//@param integer
 	//@return void
 	//does the game the amount of times it is given
-	void playGod(int loopNum){
+	void playGod(int loopNum) {
 		//loops through the Game multiple times 
 		//final result is the final board
 		for (int i = 0; i < loopNum; i++) {
 			NewCommunity();
 		}
-	}	
+	}
 
 	//@param two integers
 	//checks to make sure the values being checked is in the
@@ -191,28 +195,36 @@ public:
 		//the if statements checks the 8 neighbors, can be less for 
 		//the border and corner rectangles.
 		//checks if its onWorld and Aliveness
-		if (onWorld(r - 1, c - 1) == true && Alive(r - 1, c - 1) == true) {
+		if(onWorld(r - 1, c - 1) == true && Alive(r - 1, c - 1) == true)
+		{
 			neighbor++;
 		}
-		if (onWorld(r - 1, c) == true && Alive(r - 1, c) == true) {
+		if(onWorld(r - 1, c) == true && Alive(r - 1, c) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r - 1, c + 1) == true && Alive(r - 1, c + 1) == true) {
+		if(onWorld(r - 1, c + 1) == true && Alive(r - 1, c + 1) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r, c - 1) == true && Alive(r, c - 1) == true) {
+		if(onWorld(r, c - 1) == true && Alive(r, c - 1) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r, c + 1) == true && Alive(r, c + 1) == true) {
+		if(onWorld(r, c + 1) == true && Alive(r, c + 1) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r + 1, c - 1) == true && Alive(r + 1, c - 1) == true) {
+		if(onWorld(r + 1, c - 1) == true && Alive(r + 1, c - 1) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r + 1, c) == true && Alive(r + 1, c) == true) {
+		if(onWorld(r + 1, c) == true && Alive(r + 1, c) == true) 
+		{
 			neighbor++;
 		}
-		if (onWorld(r + 1, c + 1) == true && Alive(r + 1, c + 1) == true) {
+		if(onWorld(r + 1, c + 1) == true && Alive(r + 1, c + 1) == true)
+		{
 			neighbor++;
 		}
 		return neighbor;
@@ -261,12 +273,14 @@ public:
 		//the rules that apply to alive cells
 		if (Alive(r, c) == true) {
 			//dies from underpop or overpop
-			if (gameBoard[r][c].neighborCount < 2 || gameBoard[r][c].neighborCount > 3)
+			if (gameBoard[r][c].neighborCount < 2 ||
+				gameBoard[r][c].neighborCount > 3)
 			{
 				gameBoard[r][c].isAlive = false;
 			}
 			//second chance at this thing called Life
-			else if (gameBoard[r][c].neighborCount == 2 || gameBoard[r][c].neighborCount == 3) {
+			else if (gameBoard[r][c].neighborCount == 2 ||
+				gameBoard[r][c].neighborCount == 3) {
 				gameBoard[r][c].isAlive = true;
 			}
 		}
@@ -302,13 +316,15 @@ public:
 		outfile << "Oct 15, 2018\n";
 		outfile << "---------------------------------------\n";
 
+		//printing vals of isAlive and neighborCount
 		for (int i = 0; i < Rows; i++) {
 			for (int j = 0; j < Cols; j++) {
-				outfile << "[" << gameBoard[i][j].isAlive << "," << gameBoard[i][j].neighborCount << "]";
+				outfile << "[" << gameBoard[i][j].isAlive << "," <<
+					gameBoard[i][j].neighborCount << "]";
 			}
 			outfile << std::endl;
 		}
-		//drawWorld();
+		outfile.close();
 	}
 
 };
@@ -321,7 +337,7 @@ int main(int argc, char** argv) {
 	}
 	//given in command line
 	std::string infilename = argv[1];
-	std::string numTimes= argv[2];
+	std::string numTimes = argv[2];
 	std::string outfilename = argv[3];
 
 	//int numLoop = G.getNumLoop(numTimes);
@@ -330,16 +346,15 @@ int main(int argc, char** argv) {
 	//// Run this file for 338 generations
 	//G.playGod(338);
 	//G.printWorld(outfilename);
-	//calling SFML
+	
+	//std::ifstream infile;
+	//infile.open("gen_zero.txt");
 
-	std::ifstream infile;
-	infile.open("gen_zero.txt");
-
-	G.initBoard(infile);
+	G.initBoard("gen_zero.txt");
 	G.playGod(338);
 	G.printWorld("output.txt");
 
-
+	//calling SFML
 	while (G.Window.isOpen()) {
 		Event event;
 		while (G.Window.pollEvent(event)) {
