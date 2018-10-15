@@ -1,3 +1,20 @@
+/**
+*  Course: CMPS 2143 - OOP
+*  Program: P04
+*
+*  Purpose: The program is a game of life playthrough. 
+*	It applies the rules of the game, and it does
+* 	the game the amount the user or command line 
+*	suggests. It is displayed using SFML. The
+* 	white rectangles represent the alive cells,
+* 	rest are dead. The rules apply to 
+*	overpopulation, underpopulation, and resurrections.
+*	
+* 
+*  @author Arshia Clare
+*  @version 1.1 10/15/2018
+*  @github repo: https://github.com/ArshiaClare
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
