@@ -4,7 +4,7 @@
 *
 *  Purpose: The program is a game of life playthrough.
 *	It applies the rules of the game, and it does
-* 	the game the amount the user or command line
+* 	the game the amount the command line
 *	suggests. It is displayed using SFML. The
 * 	white rectangles represent the alive cells,
 * 	rest are dead. The rules apply to
