@@ -257,7 +257,7 @@ void GameOfLife::header(std::ofstream& outfile) {
 	outfile << "Arshia Clare\n";
 	outfile << "This is the output of the infile\n";
 	outfile << "Program 04 - Game of Life\n";
-	outfile << "Oct 15, 2018\n";
+	outfile << "Oct 18, 2018\n";
 	outfile << "---------------------------------------\n";
 
 }
