@@ -25,15 +25,15 @@ class GameClock : public Group {
 private:
 	sf::Text text;          // var to hold clock digits
 	sf::Clock gameClock;    // SFML clock type		
-	sf::Font font;			// SFML	Font
+	sf::Font font;		// SFML	Font
 	sf::Color textColor;	// color of the font
 	sf::RectangleShape rectangle;	//SFML rectangle
-	int fontSize;			// stores the size
-	int begin;				// first value of the clock
-	int end;				// last value of the clock
-	bool fin;				// clock finished? T/F
-	float dx;				//	displacement x value
-	float dy;				//	displacement y value
+	int fontSize;		// stores the size
+	int begin;		// first value of the clock
+	int end;		// last value of the clock
+	bool fin;		// clock finished? T/F
+	float dx;		//	displacement x value
+	float dy;		//	displacement y value
 
 public:
 	//constructor
@@ -51,7 +51,7 @@ public:
 		}
 
 		begin = first;	//first value of the clock
-		end = last;		//last value of the clock
+		end = last;	//last value of the clock
 
 		fontSize = 30;	
 
@@ -245,8 +245,8 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(500, 600), "Arshia Clare A06");
 
 	GameClock S(0, 10);  //incrementing from 0 - 10
-	GameClock G(7, 0);	 //decrementing from 7 -0
-	GameClock Z(0, 0);	 //still it is a finished clock
+	GameClock G(7, 0);   //decrementing from 7 -0
+	GameClock Z(0, 0);   //still it is a finished clock
 
 	//G clock setup
 	G.setBackgroundColor(34, 89, 55);	//green
