@@ -32,8 +32,8 @@ private:
 	int begin;		// first value of the clock
 	int end;		// last value of the clock
 	bool fin;		// clock finished? T/F
-	float dx;		//	displacement x value
-	float dy;		//	displacement y value
+	float dx;		// displacement x value
+	float dy;		// displacement y value
 
 public:
 	//constructor
